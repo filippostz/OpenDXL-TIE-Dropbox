@@ -6,7 +6,7 @@ Script that will scan every file within your DropBox folder structure and will c
 
 The project is working with the the [McAfee TIE DXL Python Client Library](https://github.com/opendxl/opendxl-tie-client-python) github project that helps to get an high level wrapper for the TIE Data Exchange Layer API.
 
-![Alt text](https://cloud.githubusercontent.com/assets/24607076/24209161/6ddb8f30-0f1d-11e7-9f26-b8389cc80ca3.png "Structure")
+![Alt text](https://cloud.githubusercontent.com/assets/24607076/24969148/a1ae308e-1fa7-11e7-89e5-4f3618aabf8c.png "Structure")
 
 ## Setup
 
