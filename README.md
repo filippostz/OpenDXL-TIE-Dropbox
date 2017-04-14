@@ -17,6 +17,17 @@ This is a real challenge to the entire project and the main script has been buil
 
 ## Setup
 
+#### Python SDK for Dropbox
+
+Create a Dropbox application to make API requests and obtaining an access **token**
+
+https://dropbox.com/developers/apps.
+
+See the Python SDK for Dropbox API v2 at the follow link:
+
+https://github.com/dropbox/dropbox-sdk-python
+
+
 #### McAfee OpenDXL SDK
 
 https://www.mcafee.com/us/developers/open-dxl/index.aspx
@@ -30,11 +41,24 @@ See the McAfee Threat Intelligence Exchange (TIE) DXL Python Client Library at t
 
 https://github.com/opendxl/opendxl-tie-client-python/wiki
 
-#### Python SDK for Dropbox
+#### edit the dxl.conf
+```clj
+[Certs]
+BrokerCertChain=certs/brokercert.crt
+CertFile=certs/client.crt
+PrivateKey=certs/client.key
 
-See the Python SDK for Dropbox API v2 at the follow link:
+[Brokers]
+{}={};8883;
+```
+#### Dropbox public API service
 
-https://github.com/dropbox/dropbox-sdk-python
+define the **TOKEN** variable inside the **service.py** script.
+
+```
+TOKEN = ''
+```
+
 
 
 Results are shown as follows:
