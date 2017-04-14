@@ -105,10 +105,17 @@ with DxlClient(config) as client:
 
 		try:
 			if ( file.size < MAXFILESIZE ):
-				content_hash = box.files_get_metadata(path=str(file.path_display)).content_hash
+				#check if Dropbox servers are providing the content_hash
+
+				try:
+					content_hash = box.files_get_metadata(path=str(file.path_display)).content_hash
+				except:
+					print "hash not provided from dropbox"
+					content_hash = '-'
+
 				# check if the hash has been already calculated in the past
 				if not isFileInList(content_hash, DBFile):
-					print "New file! Downloading and calculating the HASH..."
+					print "Downloading and calculating the HASH..."
 
 					# Download the file
 					box.files_download_to_file(str(file.name),path=str(file.path_display))
@@ -116,7 +123,8 @@ with DxlClient(config) as client:
 					md5item = md5hex(str(file.name))
 					sha1item= sha1hex(str(file.name))
 
-					addFileInList(content_hash, md5item, sha1item, str(file.name), DBFile)
+					if content_hash != '-':
+						addFileInList(content_hash, md5item, sha1item, str(file.name), DBFile)
 
 					# Delete the file
 					os.remove(str(file.name))
