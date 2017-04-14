@@ -32,14 +32,15 @@ https://github.com/dropbox/dropbox-sdk-python
 
 https://www.mcafee.com/us/developers/open-dxl/index.aspx
 
-1. Python SDK Installation [link](https://opendxl.github.io/opendxl-client-python/pydoc/installation.html)
-2. Certificate Files Creation [link](https://opendxl.github.io/opendxl-client-python/pydoc/certcreation.html)
-3. ePO Certificate Authority (CA) Import [link](https://opendxl.github.io/opendxl-client-python/pydoc/epocaimport.html)
-4. ePO Broker Certificates Export  [link](https://opendxl.github.io/opendxl-client-python/pydoc/epobrokercertsexport.html)
-
-See the McAfee Threat Intelligence Exchange (TIE) DXL Python Client Library at the follow link:
+McAfee Threat Intelligence Exchange (TIE) DXL Python Client Library at the follow link:
 
 https://github.com/opendxl/opendxl-tie-client-python/wiki
+
+* Certificate Files Creation [link](https://opendxl.github.io/opendxl-client-python/pydoc/certcreation.html)
+* ePO Certificate Authority (CA) Import [link](https://opendxl.github.io/opendxl-client-python/pydoc/epocaimport.html)
+* ePO Broker Certificates Export  [link](https://opendxl.github.io/opendxl-client-python/pydoc/epobrokercertsexport.html)
+
+
 
 #### edit the dxl.conf
 ```clj
