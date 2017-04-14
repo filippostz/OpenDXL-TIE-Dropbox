@@ -53,7 +53,7 @@ PrivateKey=certs/client.key
 ```
 #### Dropbox public API service
 
-define the **TOKEN** variable inside the **service.py** script.
+define the **TOKEN** variable inside the **DropboxScanner.py** script.
 
 ```
 TOKEN = ''
