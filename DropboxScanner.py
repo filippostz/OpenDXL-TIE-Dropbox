@@ -108,7 +108,8 @@ with DxlClient(config) as client:
 				#check if Dropbox servers are providing the content_hash
 
 				try:
-					content_hash = box.files_get_metadata(path=str(file.path_display)).content_hash
+					#content_hash = box.files_get_metadata(path=str(file.path_display)).content_hash
+					content_hash = file.id + file.rev
 				except:
 					print "hash not provided from dropbox"
 					content_hash = '-'
