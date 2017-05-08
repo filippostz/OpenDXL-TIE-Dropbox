@@ -2,18 +2,19 @@
 
 ## Introduction
 
-Script that will scan every file within your DropBox folder structure and will check against the McAfee Threat Intelligence Exchange server [Link](https://www.mcafee.com/uk/products/threat-intelligence-exchange.aspx).
+Software that will scan every file within your DropBox folder structure and will check against the McAfee Threat Intelligence Exchange server [Link](https://www.mcafee.com/uk/products/threat-intelligence-exchange.aspx).
 
 The project is working with the the [McAfee TIE DXL Python Client Library](https://github.com/opendxl/opendxl-tie-client-python) github project that helps to get an high level wrapper for the TIE Data Exchange Layer API.
 
 ![Alt text](https://cloud.githubusercontent.com/assets/24607076/24969148/a1ae308e-1fa7-11e7-89e5-4f3618aabf8c.png "Structure")
 
-Dropbox does not analyse the files that users send and does not provide a standard Hash file like the MD5 and the SHA1.
-
+Dropbox doesn't analyse the files that users send and doesn't provide a standard HASH file like the MD5 and the SHA1.
 
 The software is connected to Dropbox on one side and to McAfee Data Exchange Layer on the other side.
+
 It checks the file parameters which are: the file size and the “dropbox Hash”. If there is not already informations stored, the file is downloaded, the MD5 and the SHA1 are calculated and then sent it to Threat Intelligence Exchange through DXL.
-Otherwise, if the file has been already cached and no changes have been done, the software contacts directly TIE for any reputations updates. Of course, in the last case, the only time required is the one consumed by the DXL communication.
+Otherwise, if the file has been already cached and no changes have been done, the software contacts directly TIE for any reputations updates. 
+
 
 ![Alt text](https://cloud.githubusercontent.com/assets/24607076/25804893/5e567802-33f5-11e7-97e1-e70c4de65b15.png "Report")
 
