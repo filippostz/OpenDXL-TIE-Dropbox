@@ -8,11 +8,12 @@ The project is working with the the [McAfee TIE DXL Python Client Library](https
 
 ![Alt text](https://cloud.githubusercontent.com/assets/24607076/24969148/a1ae308e-1fa7-11e7-89e5-4f3618aabf8c.png "Structure")
 
-Dropbox does not analyse the files that users send every day to their servers and it might be used as a vector attack by taking advantage of a trusted and well known service such as dropbox.
-Dropbox does not provide a standard Hash file like the MD5 and the SHA1.
+Dropbox does not analyse the files that users send and does not provide a standard Hash file like the MD5 and the SHA1.
+
+
 The software is connected to Dropbox on one side and to McAfee Data Exchange Layer on the other side.
-It checks the file parameters which are: the file size and the “dropbox Hash”. If we don’t have informations, the file is downloaded, the MD5 and the SHA1 are calculated and then sent it to Threat Intelligence Exchange through DXL.
-Otherwise, it the file has been already cached and no changes have been done, the software contacts directly TIE for any reputations updates. Of course, in the last case, the only time required is the one consumed by the DXL communication.
+It checks the file parameters which are: the file size and the “dropbox Hash”. If there is not already informations stored, the file is downloaded, the MD5 and the SHA1 are calculated and then sent it to Threat Intelligence Exchange through DXL.
+Otherwise, if the file has been already cached and no changes have been done, the software contacts directly TIE for any reputations updates. Of course, in the last case, the only time required is the one consumed by the DXL communication.
 
 ![Alt text](https://cloud.githubusercontent.com/assets/24607076/25804893/5e567802-33f5-11e7-97e1-e70c4de65b15.png "Report")
 
