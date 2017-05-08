@@ -2,17 +2,25 @@
 
 ## Introduction
 
-Script that will scan every file within your DropBox folder structure and will check against the McAfee GTI reputation using the McAfee Threat Intelligence Exchange server [Link](https://www.mcafee.com/uk/products/threat-intelligence-exchange.aspx).
+Script that will scan every file within your DropBox folder structure and will check against the McAfee Threat Intelligence Exchange server [Link](https://www.mcafee.com/uk/products/threat-intelligence-exchange.aspx).
 
 The project is working with the the [McAfee TIE DXL Python Client Library](https://github.com/opendxl/opendxl-tie-client-python) github project that helps to get an high level wrapper for the TIE Data Exchange Layer API.
 
 ![Alt text](https://cloud.githubusercontent.com/assets/24607076/24969148/a1ae308e-1fa7-11e7-89e5-4f3618aabf8c.png "Structure")
 
-Dropbox does not provide MD5 or SHA1 of the files and to check against an antivirus solution every single content must be downloaded.
-There is a way to keep cache of the hash file calculated locally and every time a new scan is needed, it is possible read the variable “hash_content” provided by Dropbox and make a comparison with the local “hash_content” cached. But as Dropbox says regarding the variable, 
- [Link](https://www.dropbox.com/developers/reference/content-hash)
-“You can assume that the content_hash field would always be available and we would not change the way to generate it. However in the unlikely case where we decide to change it in the future, we want to keep the transition process as smooth as possible by declaring the field as optional”.
-This is a real challenge to the entire project and the main script has been built taking in consideration the random presence of the variable “hash_content” trying to reduce as much as possible the number of file downloads.
+Dropbox does not analyse the files that users send every day to their servers and it might be used as a vector attack by taking advantage of a trusted and well known service such as dropbox.
+Dropbox does not provide a standard Hash file like the MD5 and the SHA1.
+The software is connected to Dropbox on one side and to McAfee Data Exchange Layer on the other side.
+It checks the file parameters which are: the file size and the “dropbox Hash”. If we don’t have informations, the file is downloaded, the MD5 and the SHA1 are calculated and then sent it to Threat Intelligence Exchange through DXL.
+Otherwise, it the file has been already cached and no changes have been done, the software contacts directly TIE for any reputations updates. Of course, in the last case, the only time required is the one consumed by the DXL communication.
+
+![Alt text](https://cloud.githubusercontent.com/assets/24607076/25804893/5e567802-33f5-11e7-97e1-e70c4de65b15.png "Report")
+
+
+For every dropbox scan, a completed report is created.
+The software intentionally does not delete or quarantine files keeping a no invasive scan strategy and preserving the user privacy. So, for instance, service providers can scan dropbox customers files without aXcessing to it but providing a complete report of the possible threats.
+A log file with all the scan details is also generated. 
+
 
 
 ## Setup
@@ -63,7 +71,6 @@ TOKEN = ''
 
 
 Results are shown as follows:
-![Alt text](https://cloud.githubusercontent.com/assets/24607076/25804893/5e567802-33f5-11e7-97e1-e70c4de65b15.png "Report")
 
 ![Alt text](https://cloud.githubusercontent.com/assets/24607076/25804943/9bc94aa2-33f5-11e7-930a-6fa8ab183ee0.png "Report")
 
