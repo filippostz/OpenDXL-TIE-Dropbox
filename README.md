@@ -65,52 +65,5 @@ TOKEN = ''
 Results are shown as follows:
 ![Alt text](https://cloud.githubusercontent.com/assets/24607076/25804893/5e567802-33f5-11e7-97e1-e70c4de65b15.png "Report")
 
-
-
-```
-### Max file size scan:10 MB
-### DXL connected
-### Dropbox connected
-### Getting content from Dropbox
-
-File already cached! Updating reputation.
-[GTI: Not Set] /Adaptive_Threat_Protection_10_5_0_257_Extension.zip
-
-File already cached! Updating reputation.
-[GTI: Not Set] /artgame.exe
-
-New file! Downloading and calculating the HASH...
-[GTI: Known malicious] /software/ArtemisTest.exe
-
-New file! Downloading and calculating the HASH...
-[GTI: Known trusted] /other/AdmTmpl.dll
-
-File already cached! Updating reputation.
-[GTI: Known trusted] /other/adprovider.dll
-
-File already cached! Updating reputation.
-[GTI: Known trusted] /other/7z1510-x64.exe
-
-File already cached! Updating reputation.
-[GTI: Not Set] /other/putty-custom.exe
-
-File already cached! Updating reputation.
-[GTI: Known trusted] /tools/putty.exe
-
-File already cached! Updating reputation.
-[GTI: Known trusted] /software/beta/Cisco_WebEx_Add-On.exe
-
-File already cached! Updating reputation.
-[GTI: Known trusted] /software/beta/Frhed-1.6.0-Setup.exe
-
-
-[10] Total file scanned in 10 seconds
-
-[6] Known trusted
-[1] Known malicious
-[3] Not Set
-
-```
-
-
+![Alt text](https://cloud.githubusercontent.com/assets/24607076/25804943/9bc94aa2-33f5-11e7-930a-6fa8ab183ee0.png "Report")
 
