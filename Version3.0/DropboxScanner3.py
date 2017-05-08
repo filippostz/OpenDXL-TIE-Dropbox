@@ -1,6 +1,6 @@
 TOKEN = ""
 MAXFILESIZE = 1024 * 1024 * 10
-TITLE="Dropbox TIE Scanner v 1.0"
+TITLE="Dropbox TIE Scanner v 3.0"
 DESCRIPTION="Threat Intelligence Exchange Dropbox Scanner"
 AUTHOR="Author: Filippo Sitzia"
 DBFile = "fileDB.txt"
