@@ -65,8 +65,6 @@ TOKEN = ''
 Results are shown as follows:
 
 
-![Alt text](https://cloud.githubusercontent.com/assets/24607076/24756294/16c97eaa-1ad5-11e7-86d7-182c8aa96f78.png "Report")
-
 
 ```
 ### Max file size scan:10 MB
