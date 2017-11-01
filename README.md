@@ -20,7 +20,7 @@ Otherwise, if the file has been already cached and no changes have been done, th
 
 
 For every dropbox scan, a completed report is created.
-The software intentionally does not delete or quarantine files keeping a no invasive scan strategy and preserving the user privacy. So, for instance, service providers can scan dropbox customers files without aXcessing to it but providing a complete report of the possible threats.
+The software intentionally does not delete or quarantine files keeping a no invasive scan strategy and preserving the user privacy. So, for instance, service providers can scan dropbox customers files without accessing to it but providing a complete report of the possible threats.
 A log file with all the scan details is also generated. 
 
 
