@@ -50,7 +50,11 @@ https://github.com/opendxl/opendxl-tie-client-python/wiki
 * ePO Certificate Authority (CA) Import [link](https://opendxl.github.io/opendxl-client-python/pydoc/epocaimport.html)
 * ePO Broker Certificates Export  [link](https://opendxl.github.io/opendxl-client-python/pydoc/epobrokercertsexport.html)
 
-
+#### Python requirements
+```
+pip install -r requirements.txt
+apt-get install python-tk
+```
 
 #### edit the dxl.conf
 ```clj
